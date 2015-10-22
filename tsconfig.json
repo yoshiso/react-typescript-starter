@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es6",
+        "jsx": "react"
+    },
+    "exclude": [
+        "node_modules",
+        "dest"
+    ],
+    "compileOnSave": false
+}
