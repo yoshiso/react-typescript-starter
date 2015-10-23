@@ -1,4 +1,7 @@
+/// <reference path="../../typings/bundle.d.ts"/>
+
 import * as React from 'react';
+import * as marked from 'marked';
 
 export interface CommentProps {
   author: string;
@@ -16,11 +19,16 @@ export class Comment extends React.Component<CommentProps, CommentState> {
     super(props)
   }
 
+  rawMarkup(): {__html: string} {
+    var rawMarkup = marked.parse(this.props.children.toString(), {sanitize: true})
+    return {__html: rawMarkup}
+  }
+
   render(): JSX.Element {
     return (
       <div className="comment">
         <h2>{this.props.author}</h2>
-        {this.props.children}
+        <span dangerouslySetInnerHTML={this.rawMarkup()}></span>
       </div>
     )
   }

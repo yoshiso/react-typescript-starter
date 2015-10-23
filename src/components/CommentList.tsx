@@ -19,7 +19,7 @@ export class CommentList extends React.Component<CommentListProps, CommentListSt
   render(): JSX.Element {
     return (
       <div className="commentList">
-        <Comment author="Pete Hunt"> This is one comment</Comment>
+        <Comment author="Pete Hunt">This is one comment</Comment>
         <Comment author="Jordan Walke"> This is two comment</Comment>
       </div>
     )

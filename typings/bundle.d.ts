@@ -2,3 +2,4 @@
 /// <reference path="react-dom/react-dom.d.ts" />
 /// <reference path="react-router/react-router.d.ts" />
 /// <reference path="history/history.d.ts" />
+/// <reference path="marked/marked.d.ts" />
