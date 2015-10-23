@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Comment} from './Comment';
 
 export interface CommentListProps {
 
@@ -18,7 +19,8 @@ export class CommentList extends React.Component<CommentListProps, CommentListSt
   render(): JSX.Element {
     return (
       <div className="commentList">
-        Hello, world! I am a CommentList.
+        <Comment author="Pete Hunt"> This is one comment</Comment>
+        <Comment author="Jordan Walke"> This is two comment</Comment>
       </div>
     )
   }
