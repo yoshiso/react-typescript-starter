@@ -12,8 +12,11 @@ var React = require('react'),
 describe('Todo-item component', function(){
 
   before('render and locate element', function() {
+
+    var data = []
+
     var renderedComponent = TestUtils.renderIntoDocument(
-      <CommentBox />
+      <CommentBox data={[]} />
     );
 
     // Searching for <input> tag within rendered React component

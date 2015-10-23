@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Comment} from './Comment';
 
 export interface CommentListProps {
-
+  data: Array<{author: string, text: string}>
 }
 
 export interface CommentListState {
@@ -17,10 +17,13 @@ export class CommentList extends React.Component<CommentListProps, CommentListSt
   }
 
   render(): JSX.Element {
+    const commentNodes = this.props.data.map((commentData) => {
+      return <Comment author={commentData.author}>{commentData.text}</Comment>
+    })
+
     return (
       <div className="commentList">
-        <Comment author="Pete Hunt">This is one comment</Comment>
-        <Comment author="Jordan Walke"> This is two comment</Comment>
+        {commentNodes}
       </div>
     )
   }
